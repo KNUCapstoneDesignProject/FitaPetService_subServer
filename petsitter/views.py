@@ -126,8 +126,6 @@ def uploadPetImage(request):
     )
     print(fileTitle)
     document.save()
-    #imgurl = models.ImgDocument.objects.get(title=fileTitle)
-    #imgurl.uploadedImg = 'http://118.45.212.21:8000/pets/'+
     imgdocuments = models.ImgDocument.objects.get(title=fileTitle)
     serializer = PostSerializer(imgdocuments)
     #serializer.data.uploadedImg = 'http://118.45.212.21:8000/pets'+serializer.data.uploadedImg
